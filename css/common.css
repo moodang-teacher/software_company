@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+/* 웹폰트 정의 */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+:root {
+  --main-color: #3189ff;
+  --main-color-dark: #1f60b8;
+  --title-color: #222;
+  --text-color: #555;
+  --line-color: #bdbdbd;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font: 1.6rem/1.5 "Jost", "Noto Sans KR", sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+hr,
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+::selection {
+  background: var(--main-color);
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
