@@ -125,3 +125,23 @@ nav {
   font-weight: 700;
   font-size: 1.4rem;
 }
+
+/* 반응형 분기점 */
+@media (max-width: 1180px) {
+  .inner {
+    width: 94.5313%; /* 태블릿 크기를 먼저 적용 */
+  }
+}
+
+/* 태블릿 디자인 */
+@media (max-width: 1024px) {
+  nav {
+    height: 10rem;
+  }
+  .gnb {
+    display: none;
+  }
+  .btn-menu {
+    display: block;
+  }
+}
