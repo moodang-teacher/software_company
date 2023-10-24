@@ -18,6 +18,7 @@ html {
 body {
   font: 1.6rem/1.5 "Jost", "Noto Sans KR", sans-serif;
   color: var(--text-color);
+  word-break: keep-all; /* wbka */
 }
 
 a {
@@ -46,4 +47,81 @@ hr,
 
 img {
   max-width: 100%;
+}
+
+button,
+label {
+  cursor: pointer; /* cup */
+}
+
+.inner {
+  width: 118rem;
+  margin: 0 auto;
+  background: rgba(255, 255, 0, 0.15);
+  position: relative;
+  height: 100%;
+}
+
+#header {
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* bxsh */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12rem;
+}
+
+.logo a {
+  display: block;
+  width: 16.4rem;
+  height: 3.2rem;
+  background: url(../img/logo.svg) no-repeat 0 0 / cover;
+}
+
+.btn-menu {
+  width: 4.8rem;
+  height: 4.8rem;
+  background: url(../img/ico-menu.svg) no-repeat 50%;
+  display: none;
+}
+
+.gnb {
+  display: flex;
+}
+.gnb li a {
+  display: block;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--title-color);
+}
+
+.gnb li a:hover {
+  color: var(--main-color);
+}
+
+#footer {
+  background: #333;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 5.2rem 0;
+}
+
+.foot-con {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse; /* fxdrr */
+}
+
+.foot-logo {
+  display: block;
+  width: 16.4rem;
+  height: 3.2rem;
+  background: url(../img/foot-logo.svg) no-repeat 0 0 / cover;
+}
+.foot-text {
+  font-weight: 700;
+  font-size: 1.4rem;
 }
