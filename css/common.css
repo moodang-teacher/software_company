@@ -57,7 +57,7 @@ label {
 .inner {
   width: 118rem;
   margin: 0 auto;
-  background: rgba(255, 255, 0, 0.15);
+  /* background: rgba(255, 255, 0, 0.15); */
   position: relative;
   height: 100%;
 }
@@ -143,5 +143,21 @@ nav {
   }
   .btn-menu {
     display: block;
+  }
+}
+
+/* 모바일 디자인 */
+@media (max-width: 500px) {
+  .inner {
+    width: 89.7436%;
+  }
+  .foot-con {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    text-align: center;
+  }
+  .foot-text p + p {
+    margin-top: 1.2rem;
   }
 }

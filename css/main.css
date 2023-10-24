@@ -31,7 +31,7 @@
   margin-top: 2.4rem;
 }
 .visual-title .cta {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 20rem;
@@ -75,7 +75,7 @@
   width: 28rem;
   width: 23.7288%;
 
-  height: 30.2rem;
+  min-height: 30.2rem;
   background: #fff;
   box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.05);
   padding: 2.8rem 3.2rem;
@@ -199,19 +199,28 @@
   font-weight: 700;
 }
 
-/* 태블릿 디자인 */
-@media (max-width: 1024px) {
+/* 반응형 분기점 */
+@media (max-width: 1180px) {
   .visual {
     height: 64rem;
-    height: auto;
-    aspect-ratio: 1/0.625;
     background-position: 50% 0;
     background-size: cover;
   }
   .visual-title {
+    width: 70%;
+  }
+}
+
+/* 태블릿 디자인 */
+@media (max-width: 1024px) {
+  .visual {
+    height: auto;
+    aspect-ratio: 1/0.625;
+  }
+  /* .visual-title {
     width: 46rem;
     width: 47.5207%;
-  }
+  } */
   .visual-title h2 {
     font-size: 4.6875vw;
   }
@@ -225,7 +234,7 @@
   .business-list li {
     width: 47.4rem;
     width: 48.9669%;
-    height: 28rem;
+    min-height: 28rem;
   }
   .works-list li {
     height: auto;
@@ -241,5 +250,40 @@
   }
   .column p {
     column-count: 1;
+  }
+}
+
+/* 분기사이를 점검한 후에 필요하면 추가 */
+@media (max-width: 900px) {
+  .news-con {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  .news-text,
+  .news-con figure {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .visual {
+    aspect-ratio: 1/1.2308;
+  }
+  .visual-title {
+    width: 100%;
+    text-align: center;
+  }
+  .visual-title h2 {
+    font-size: 3rem;
+  }
+  .business-list li {
+    width: 100%;
+  }
+  .works-list li {
+    width: 100%;
+  }
+
+  .column h4 + strong {
+    font-size: 2.4rem;
   }
 }
