@@ -66,16 +66,17 @@
 
 /* 사업영역 소개 */
 .business-list {
-  /* background: #5f5; */
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-auto-rows: minmax(30.2rem, auto);
+  gap: 2rem;
 }
 .business-list li {
   border: 1px solid var(--line-color);
-  width: 28rem;
+  /* width: 28rem;
   width: 23.7288%;
 
-  min-height: 30.2rem;
+  min-height: 30.2rem; */
   background: #fff;
   box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.05);
   padding: 2.8rem 3.2rem;
@@ -99,13 +100,12 @@
 
 /* 포트폴리오 */
 .works-list {
-  display: flex;
-  flex-wrap: wrap; /* fxww */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-auto-rows: minmax(26rem, auto);
   margin-top: 2.8rem;
 }
 .works-list li {
-  width: 50%;
-  height: 26rem;
   position: relative;
 }
 .works-list li figure {
@@ -147,16 +147,12 @@
 
 /* 뉴스 */
 .news-con {
-  display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, auto));
+  gap: 6rem;
+  align-items: center;
 }
 
-.news-text {
-  width: 48rem;
-  width: 40.678%;
-  margin-top: 1.1rem;
-}
 .news-text strong {
   display: block;
   margin-top: 1.8rem;
@@ -170,8 +166,7 @@
 }
 
 .news-con figure {
-  width: 64rem;
-  width: 54.2373%;
+  border: 1px solid #000;
 }
 
 /* column */
@@ -217,51 +212,31 @@
     height: auto;
     aspect-ratio: 1/0.625;
   }
-  /* .visual-title {
-    width: 46rem;
-    width: 47.5207%;
-  } */
+
   .visual-title h2 {
     font-size: 4.6875vw;
   }
   #container section {
     padding: 5rem 0;
   }
-  .business-list {
-    flex-wrap: wrap;
-    row-gap: 2rem;
+
+  .news-con {
+    /* display: block; */
+    grid-template-columns: 1fr;
   }
-  .business-list li {
-    width: 47.4rem;
-    width: 48.9669%;
-    min-height: 28rem;
-  }
-  .works-list li {
-    height: auto;
-    aspect-ratio: 1/0.5372; /* asr */
-  }
-  .news-text {
-    width: 47.4rem;
-    width: 48.9669%;
-  }
-  .news-con figure {
-    width: 47.4rem;
-    width: 48.9669%;
-  }
+
   .column p {
     column-count: 1;
   }
 }
 
-/* 분기사이를 점검한 후에 필요하면 추가 */
-@media (max-width: 900px) {
-  .news-con {
-    flex-direction: column;
-    gap: 2.4rem;
+@media (max-width: 700px) {
+  .visual {
+    aspect-ratio: 1/1;
   }
-  .news-text,
-  .news-con figure {
+  .visual-title {
     width: 100%;
+    text-align: center;
   }
 }
 
@@ -269,18 +244,8 @@
   .visual {
     aspect-ratio: 1/1.2308;
   }
-  .visual-title {
-    width: 100%;
-    text-align: center;
-  }
   .visual-title h2 {
     font-size: 3rem;
-  }
-  .business-list li {
-    width: 100%;
-  }
-  .works-list li {
-    width: 100%;
   }
 
   .column h4 + strong {
